@@ -14,7 +14,6 @@ $(document).ready(function() {
 
     var newDestination = new Destination(inputtedLocation, inputtedLandmarks, inputtedYear);
     $("ul#places").append("<li><span class = 'place'>" + newDestination.location + "</span></li>");
-    alert (inputtedLandmarks + inputtedYear);
 
     $(".place").last().click(function() {
       $("#show-place").show();
@@ -23,6 +22,9 @@ $(document).ready(function() {
       $(".show-year").text(newDestination.year);
     });
 
+    $("input#new-location").val("");
+    $("input#new-landmarks").val("");
+    $("input#new-year").val("");
 
 
   });
