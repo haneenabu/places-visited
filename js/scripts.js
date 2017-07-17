@@ -14,5 +14,19 @@ $(document).ready(function() {
 
     var newDestination = new Destination(inputtedLocation, inputtedLandmarks, inputtedYear);
     $("ul#places").append("<li><span class = 'place'>" + newDestination.location + "</span></li>");
+    alert (inputtedLandmarks + inputtedYear);
+
+    $(".place").last().click(function() {
+      $("#show-place").show();
+      $("#show-place h2").text(newDestination.location);
+      $(".show-landmarks").text(newDestination.landmarks);
+      $(".show-year").text(newDestination.year);
+    });
+
+
+
   });
+
+
+
 });
